@@ -1,0 +1,42 @@
+﻿<Properties StartupConfiguration="{A69ABA74-6085-429A-AD41-9433FACDBF80}|https">
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.T2210M__MVC PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="T2210M_MVC/Views/Auth/Index.cshtml">
+    <Files>
+      <File FileName="T2210M_MVC/Controllers/HomeController.cs" Line="13" Column="6" />
+      <File FileName="T2210M_MVC/Program.cs" Line="29" Column="1" />
+      <File FileName="T2210M_MVC/Views/Home/AboutUs.cshtml" Line="5" Column="23" />
+      <File FileName="T2210M_MVC/Models/UserRegisterModel.cs" Line="5" Column="3" />
+      <File FileName="T2210M_MVC/Controllers/UserController.cs" Line="34" Column="28" />
+      <File FileName="T2210M_MVC/Views/Auth/Index.cshtml" Line="20" Column="18" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="T2210M" expanded="True">
+            <Node name="T2210M_MVC" expanded="True">
+              <Node name="Controllers" expanded="True" />
+              <Node name="Models" expanded="True" />
+              <Node name="Properties" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="Auth" expanded="True">
+                  <Node name="Index.cshtml" selected="True" />
+                </Node>
+                <Node name="Home" expanded="True" />
+                <Node name="Shared" expanded="True" />
+              </Node>
+              <Node name="wwwroot" expanded="True">
+                <Node name="css" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+</Properties>

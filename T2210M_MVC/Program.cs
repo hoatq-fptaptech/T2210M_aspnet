@@ -1,0 +1,36 @@
+﻿using Microsoft.EntityFrameworkCore;
+var builder = WebApplication.CreateBuilder(args);
+
+// Add services to the container.
+builder.Services.AddControllersWithViews();
+
+// add connection db
+string connectionString = "Data Source=localhost, 1433;Database=T2210M;User Id=sa;Password=sa123456;TrustServerCertificate=true";
+builder.Services.AddDbContext<T2210M_MVC.Entities.DataContext>(
+    options => options.UseSqlServer(connectionString)
+ );
+// END
+
+var app = builder.Build();
+
+// Configure the HTTP request pipeline.
+if (!app.Environment.IsDevelopment())
+{
+    app.UseExceptionHandler("/Home/Error");
+    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
+    app.UseHsts();
+}
+
+app.UseHttpsRedirection();
+app.UseStaticFiles();
+
+app.UseRouting();
+
+app.UseAuthorization();
+
+app.MapControllerRoute(
+    name: "default",
+    pattern: "{controller=Home}/{action=Index}/{id?}");
+
+app.Run();
+
