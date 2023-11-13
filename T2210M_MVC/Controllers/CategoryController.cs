@@ -33,7 +33,16 @@ namespace T2210M_MVC.Controllers
         [HttpPost]
         public IActionResult Create(CategoryModel model)
         {
-            
+            if (ModelState.IsValid)
+            {
+                // save to db
+                _context.Categories.Add(new Category { Name = model.Name });
+                _context.SaveChanges();
+
+                // redirect to list
+                return RedirectToAction("Index");
+            }
+            return View(model);
         }
     }
 }
