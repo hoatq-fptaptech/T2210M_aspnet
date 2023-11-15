@@ -1,15 +1,26 @@
 ﻿<Properties StartupConfiguration="{A69ABA74-6085-429A-AD41-9433FACDBF80}|https">
+  <MonoDevelop.Ide.ItemProperties.T2210M__MVC PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.Workbench ActiveDocument="T2210M_MVC/Program.cs">
     <Files>
       <File FileName="T2210M_MVC/Controllers/HomeController.cs" />
-      <File FileName="T2210M_MVC/Program.cs" Line="13" Column="1" />
+      <File FileName="T2210M_MVC/Program.cs" Line="14" Column="27" />
       <File FileName="T2210M_MVC/Views/Home/AboutUs.cshtml" />
-      <File FileName="T2210M_MVC/Models/UserRegisterModel.cs" />
+      <File FileName="T2210M_MVC/Models/UserRegisterModel.cs" Line="13" Column="1" />
       <File FileName="T2210M_MVC/Views/Auth/Index.cshtml" Line="11" Column="9" />
-      <File FileName="T2210M_MVC/Entities/Category.cs" Line="6" Column="23" />
+      <File FileName="T2210M_MVC/Entities/Category.cs" Line="7" Column="23" />
       <File FileName="T2210M_MVC/Entities/Product.cs" Line="24" Column="29" />
-      <File FileName="T2210M_MVC/Entities/DataContext.cs" Line="2" Column="37" />
-      <File FileName="T2210M_MVC/appsettings.json" Line="14" Column="1" />
+      <File FileName="T2210M_MVC/Entities/DataContext.cs" />
+      <File FileName="T2210M_MVC/appsettings.json" />
+      <File FileName="T2210M_MVC/Models/CategoryModel.cs" Line="12" Column="3" />
+      <File FileName="T2210M_MVC/Controllers/CategoryController.cs" Line="36" Column="36" />
+      <File FileName="T2210M_MVC/Views/Category/Index.cshtml" Line="6" Column="90" />
+      <File FileName="T2210M_MVC/Views/Category/Create.cshtml" Line="12" Column="49" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -25,6 +36,7 @@
               <Node name="Properties" expanded="True" />
               <Node name="Views" expanded="True">
                 <Node name="Auth" expanded="True" />
+                <Node name="Category" expanded="True" />
                 <Node name="Home" expanded="True" />
                 <Node name="Shared" expanded="True" />
               </Node>
@@ -35,11 +47,4 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.ItemProperties.T2210M__MVC PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
 </Properties>

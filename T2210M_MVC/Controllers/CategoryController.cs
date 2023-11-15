@@ -44,6 +44,40 @@ namespace T2210M_MVC.Controllers
             }
             return View(model);
         }
+
+        [HttpGet]
+        public IActionResult Edit(int id)
+        {
+            Category category = _context.Categories.Find(id);
+            if (category == null)
+                return NotFound();
+            return View(new CategoryModel { Id = category.Id, Name = category.Name }); ;
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Edit(CategoryModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                _context.Categories.Update(new Category {
+                    Id=model.Id,Name=model.Name});
+                _context.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            return View(model);
+
+        }
+
+        public IActionResult Delete(int id)
+        {
+            Category category = _context.Categories.Find(id);
+            if (category == null)
+                return NotFound();
+            _context.Categories.Remove(category);
+            _context.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
 }
 
