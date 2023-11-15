@@ -35,8 +35,22 @@ namespace T2210M_MVC.Controllers
         {
             if (ModelState.IsValid)
             {
+                string imageName = null;
+                // upload to wwwroot/uploads
+                if(model.Image != null)
+                {
+                    var image = model.Image;
+                    string path = "wwwroot/uploads";
+                    string fileName = Guid.NewGuid().ToString()
+                        + Path.GetExtension(image.FileName);
+                    var upload = Path.Combine(Directory.GetCurrentDirectory(),
+                        path,fileName);
+                    image.CopyTo(new FileStream(upload, FileMode.Create));
+                    imageName = "~/uploads/" + fileName;
+                }
                 // save to db
-                _context.Categories.Add(new Category { Name = model.Name });
+                _context.Categories.Add(new Category { Name = model.Name,
+                    Image= imageName });
                 _context.SaveChanges();
 
                 // redirect to list

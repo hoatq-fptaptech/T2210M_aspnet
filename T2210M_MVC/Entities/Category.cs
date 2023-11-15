@@ -11,6 +11,8 @@ namespace T2210M_MVC.Entities
 
 		[Required]
 		public string Name { get; set; }
+
+		public string Image { get; set; }
 	}
 }
 
