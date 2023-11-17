@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "bAywjOEx5ySMgwJVDzPWqeAFiqp99FbKpS4e3LuPEfU=",
+  "Hash": "ozyRjiSt0m15LsWQ/sNnWcrQyhlhRaRXRe8DysaUuBo=",
   "Source": "T2210M_MVC",
   "BasePath": "_content/T2210M_MVC",
   "Mode": "Default",
@@ -49,6 +49,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "/Users/quanghoatrinh/Documents/Aptech/SEM3/T2210M/T2210M/T2210M_MVC/obj/Debug/net7.0/scopedcss/projectbundle/T2210M_MVC.bundle.scp.css"
+    },
+    {
+      "Identity": "/Users/quanghoatrinh/Documents/Aptech/SEM3/T2210M/T2210M/T2210M_MVC/wwwroot/.DS_Store",
+      "SourceId": "T2210M_MVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/quanghoatrinh/Documents/Aptech/SEM3/T2210M/T2210M/T2210M_MVC/wwwroot/",
+      "BasePath": "_content/T2210M_MVC",
+      "RelativePath": ".DS_Store",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/.DS_Store"
     },
     {
       "Identity": "/Users/quanghoatrinh/Documents/Aptech/SEM3/T2210M/T2210M/T2210M_MVC/wwwroot/css/site.css",
@@ -1069,6 +1086,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/lib/jquery/LICENSE.txt"
+    },
+    {
+      "Identity": "/Users/quanghoatrinh/Documents/Aptech/SEM3/T2210M/T2210M/T2210M_MVC/wwwroot/uploads/daa96c3e-91ee-4773-a1ed-382db4b7a7b6.png",
+      "SourceId": "T2210M_MVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/quanghoatrinh/Documents/Aptech/SEM3/T2210M/T2210M/T2210M_MVC/wwwroot/",
+      "BasePath": "_content/T2210M_MVC",
+      "RelativePath": "uploads/daa96c3e-91ee-4773-a1ed-382db4b7a7b6.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/uploads/daa96c3e-91ee-4773-a1ed-382db4b7a7b6.png"
     }
   ]
 }

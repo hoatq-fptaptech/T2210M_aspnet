@@ -5,6 +5,8 @@ VisualStudioVersion = 25.0.1705.7
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T2210M_MVC", "T2210M_MVC\T2210M_MVC.csproj", "{A69ABA74-6085-429A-AD41-9433FACDBF80}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T2210M_API", "T2210M_API\T2210M_API.csproj", "{21555DBD-E84D-44F9-9D11-19C5C5E5B598}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{A69ABA74-6085-429A-AD41-9433FACDBF80}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A69ABA74-6085-429A-AD41-9433FACDBF80}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A69ABA74-6085-429A-AD41-9433FACDBF80}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21555DBD-E84D-44F9-9D11-19C5C5E5B598}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21555DBD-E84D-44F9-9D11-19C5C5E5B598}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21555DBD-E84D-44F9-9D11-19C5C5E5B598}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21555DBD-E84D-44F9-9D11-19C5C5E5B598}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
