@@ -25,8 +25,12 @@
 
   <ItemGroup>
     <None Remove="Entities\" />
+    <None Remove="DTOs\" />
+    <None Remove="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Entities\" />
+    <Folder Include="DTOs\" />
+    <Folder Include="Models\" />
   </ItemGroup>
 </Project>
