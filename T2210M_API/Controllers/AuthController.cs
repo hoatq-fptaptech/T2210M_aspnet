@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using T2210M_API.Models.Auth;
 using T2210M_API.Entities;
 using BCrypt.Net;
-
+using T2210M_API.DTOs;
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace T2210M_API.Controllers
@@ -43,10 +43,50 @@ namespace T2210M_API.Controllers
                 };
                 _context.Users.Add(user);
                 _context.SaveChanges();
-                return Ok();
+                return Ok(new UserDTO
+                {
+                    id = user.Id,
+                    email = user.Email,
+                    full_name = user.FullName,
+                    token = null
+                });
             }
             catch (Exception e) {
                 return Unauthorized("Vui lòng điền đầy đủ thông tin");
+            }
+        }
+
+        [HttpPost]
+        [Route("login")]
+        public IActionResult Login(LoginModel model)
+        {
+            if (!ModelState.IsValid)
+            {
+                return Unauthorized("Email hoặc mật khẩu không đúng");
+            }
+            try
+            {
+                var user = _context.Users.Where(u => u.Email.Equals(model.email)).First();
+                if(user == null)
+                {
+                    throw new Exception("Email hoặc mật khẩu không đúng");
+                }
+                bool verified = BCrypt.Net.BCrypt.Verify(model.password, user.Password);
+                if (!verified)
+                {
+                    throw new Exception("Email hoặc mật khẩu không đúng");
+                }
+                return Ok(new UserDTO
+                {
+                    id = user.Id,
+                    email = user.Email,
+                    full_name = user.FullName,
+                    token = null
+                });
+            }
+            catch(Exception e)
+            {
+                return Unauthorized("Email hoặc mật khẩu không đúng");
             }
         }
     }
