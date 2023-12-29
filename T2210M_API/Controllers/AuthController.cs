@@ -7,6 +7,13 @@ using T2210M_API.Models.Auth;
 using T2210M_API.Entities;
 using BCrypt.Net;
 using T2210M_API.DTOs;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using System.Security.Claims;
+using Microsoft.IdentityModel.Tokens;
+using System.IdentityModel.Tokens.Jwt;
+using System.Text;
+
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace T2210M_API.Controllers
@@ -20,6 +27,33 @@ namespace T2210M_API.Controllers
         public AuthController(T2210mApiContext context)
         {
             _context = context;
+        }
+
+        private string GenJWT(User user)
+        {
+            string key = "ajlkfhalaofab389akjfbajkfb28akfbakkjhgfo83ajkfbkzkz";
+            int lifeTime = 360;
+            string issuer = "T2210M_SEM3";
+            string audience = "T2210M_SEM3_ASP";
+
+            var secretKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(key));
+            var signatureKey = new SigningCredentials(secretKey, SecurityAlgorithms.HmacSha256);
+
+            var payload = new[]
+            {
+                new Claim(ClaimTypes.NameIdentifier,user.Id.ToString()),
+                new Claim(ClaimTypes.Email,user.Email),
+                new Claim(ClaimTypes.Name,user.FullName)
+            };
+
+            var token = new JwtSecurityToken(
+                    issuer,
+                    audience,
+                    payload,
+                    expires: DateTime.Now.AddMinutes(lifeTime),
+                    signingCredentials: signatureKey
+                );
+            return new JwtSecurityTokenHandler().WriteToken(token);
         }
 
         [HttpPost]
@@ -48,7 +82,7 @@ namespace T2210M_API.Controllers
                     id = user.Id,
                     email = user.Email,
                     full_name = user.FullName,
-                    token = null
+                    token = GenJWT(user)
                 });
             }
             catch (Exception e) {
@@ -81,7 +115,7 @@ namespace T2210M_API.Controllers
                     id = user.Id,
                     email = user.Email,
                     full_name = user.FullName,
-                    token = null
+                    token = GenJWT(user)
                 });
             }
             catch(Exception e)
