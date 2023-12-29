@@ -1,41 +1,33 @@
-﻿<Properties StartupConfiguration="{A69ABA74-6085-429A-AD41-9433FACDBF80}|https">
+﻿<Properties StartupConfiguration="{21555DBD-E84D-44F9-9D11-19C5C5E5B598}|https">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.ItemProperties.T2210M__MVC PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.ItemProperties.T2210M__API FirstBuild="True" />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints />
-  <MonoDevelop.Ide.Workbench ActiveDocument="T2210M_MVC/Controllers/CategoryController.cs">
+  <MonoDevelop.Ide.ItemProperties.T2210M__API PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workbench ActiveDocument="T2210M_API/Controllers/CategoryController.cs">
     <Files>
-      <File FileName="T2210M_MVC/Controllers/CategoryController.cs" Line="49" Column="22" />
-      <File FileName="T2210M_MVC/Views/Category/Edit.cshtml" Line="12" Column="43" />
-      <File FileName="T2210M_MVC/Views/Category/Index.cshtml" Line="13" Column="16" />
-      <File FileName="T2210M_MVC/Views/Category/Create.cshtml" Line="7" Column="27" />
-      <File FileName="T2210M_MVC/Entities/Category.cs" Line="6" Column="23" />
-      <File FileName="T2210M_MVC/Models/CategoryModel.cs" Line="1" Column="1" />
+      <File FileName="T2210M_API/Entities/T2210mApiContext.cs" Line="15" Column="6" />
+      <File FileName="T2210M_API/Program.cs" Line="11" Column="1" />
+      <File FileName="T2210M_API/appsettings.json" Line="10" Column="9" />
+      <File FileName="T2210M_API/Controllers/CategoryController.cs" Line="22" Column="1" />
+      <File FileName="T2210M_API/DTOs/CategoryDTO.cs" Line="8" Column="3" />
+      <File FileName="T2210M_API/Models/CategoryModel.cs" Line="7" Column="30" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="T2210M" expanded="True">
-            <Node name="T2210M_MVC" expanded="True">
-              <Node name="Controllers" expanded="True">
-                <Node name="CategoryController.cs" selected="True" />
+            <Node name="T2210M_API" expanded="True">
+              <Node name="Dependencies" expanded="True">
+                <Node name="PackageDependencies" expanded="True" />
               </Node>
+              <Node name="Controllers" expanded="True" />
+              <Node name="DTOs" expanded="True" />
               <Node name="Entities" expanded="True" />
-              <Node name="Migrations" expanded="True">
-                <Node name="20231110033118_f1.cs" expanded="True" />
-              </Node>
               <Node name="Models" expanded="True" />
               <Node name="Properties" expanded="True" />
-              <Node name="Views" expanded="True">
-                <Node name="Auth" expanded="True" />
-                <Node name="Category" expanded="True" />
-                <Node name="Home" expanded="True" />
-                <Node name="Shared" expanded="True" />
-              </Node>
-              <Node name="wwwroot" expanded="True">
-                <Node name="uploads" expanded="True" />
-              </Node>
             </Node>
           </Node>
         </State>

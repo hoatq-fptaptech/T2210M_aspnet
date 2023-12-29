@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "fx9PzoIv4y+8LdygHTb/XBj9So+x088jRhFaKfUuNTeekMFTTeaB0EBruLG0t6I5r4zMvdkrn4WfLFwr3BG/5w==",
+  "dgSpecHash": "RoH11pQtL2kyk0pOtiMd9fObFBxNImVYUIPFweMtLPA0gC+BH7OjKL/zNNgh0FPIufZvIGBoEOBlnXtv/j1CTQ==",
   "success": true,
   "projectFilePath": "/Users/quanghoatrinh/Documents/Aptech/SEM3/T2210M/T2210M/T2210M_API/T2210M_API.csproj",
   "expectedPackageFiles": [
     "/Users/quanghoatrinh/.nuget/packages/azure.core/1.25.0/azure.core.1.25.0.nupkg.sha512",
     "/Users/quanghoatrinh/.nuget/packages/azure.identity/1.7.0/azure.identity.1.7.0.nupkg.sha512",
+    "/Users/quanghoatrinh/.nuget/packages/bcrypt.net-next/4.0.3/bcrypt.net-next.4.0.3.nupkg.sha512",
     "/Users/quanghoatrinh/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",
     "/Users/quanghoatrinh/.nuget/packages/microsoft.aspnetcore.openapi/7.0.7/microsoft.aspnetcore.openapi.7.0.7.nupkg.sha512",
     "/Users/quanghoatrinh/.nuget/packages/microsoft.bcl.asyncinterfaces/1.1.1/microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
