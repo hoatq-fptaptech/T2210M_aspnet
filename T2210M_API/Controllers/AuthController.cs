@@ -123,6 +123,35 @@ namespace T2210M_API.Controllers
                 return Unauthorized("Email hoặc mật khẩu không đúng");
             }
         }
+
+        [HttpGet]
+        [Route("myprofile")]
+        public IActionResult MyProfile()
+        {
+            var identity = HttpContext.User.Identity as ClaimsIdentity;
+            if (!identity.IsAuthenticated)
+            {
+                return Unauthorized("Not Autheticated");
+            }
+            try
+            {
+                var userClaims = identity.Claims;
+                var userId = userClaims.FirstOrDefault(c =>
+                c.Type == ClaimTypes.NameIdentifier)?.Value;
+                var user = _context.Users.Find(Convert.ToInt32(userId));
+                return Ok(new UserDTO
+                {
+                    email = user.Email,
+                    full_name = user.FullName
+                });
+                // chỗ này thực ra phải có 1 DTO dành riêng cho profile gồm nhiều thông tin hơn
+                // ví dụ: gồm cả address, tel, cart, orders ....
+            }
+            catch (Exception e)
+            {
+                return Unauthorized(e.Message);
+            }
+        }
     }
 }
 
