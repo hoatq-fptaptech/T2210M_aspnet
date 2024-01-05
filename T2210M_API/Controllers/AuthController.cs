@@ -23,18 +23,20 @@ namespace T2210M_API.Controllers
     public class AuthController : ControllerBase
     {
         private readonly T2210mApiContext _context;
+        private readonly IConfiguration _config;
 
-        public AuthController(T2210mApiContext context)
+        public AuthController(T2210mApiContext context,IConfiguration configuration)
         {
             _context = context;
+            _config = configuration;
         }
 
         private string GenJWT(User user)
         {
-            string key = "ajlkfhalaofab389akjfbajkfb28akfbakkjhgfo83ajkfbkzkz";
-            int lifeTime = 360;
-            string issuer = "T2210M_SEM3";
-            string audience = "T2210M_SEM3_ASP";
+            string key = _config["JWT:Key"];
+            int lifeTime = Convert.ToInt32(_config["JWT:Lifetime"]);
+            string issuer = _config["JWT:Issuer"];
+            string audience = _config["JWT:Audience"];
 
             var secretKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(key));
             var signatureKey = new SigningCredentials(secretKey, SecurityAlgorithms.HmacSha256);

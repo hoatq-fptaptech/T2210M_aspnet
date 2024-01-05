@@ -17,15 +17,18 @@ builder.Services.AddDbContext<T2210M_API.Entities.T2210mApiContext>(
 // add Auth JWT Bearer
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer(options => {
+        string key = builder.Configuration["JWT:Key"];
+        string issuer = builder.Configuration["JWT:Issuer"];
+        string audience = builder.Configuration["JWT:Audience"];
         options.TokenValidationParameters = new TokenValidationParameters {
             ValidateIssuer = true,
             ValidateAudience = true,
             ValidateLifetime = true,
             ValidateIssuerSigningKey = true,
-            ValidIssuer = "T2210M_SEM3",
-            ValidAudience = "T2210M_SEM3_ASP",
+            ValidIssuer = issuer,
+            ValidAudience = audience,
             IssuerSigningKey = new SymmetricSecurityKey(
-                Encoding.UTF8.GetBytes("ajlkfhalaofab389akjfbajkfb28akfbakkjhgfo83ajkfbkzkz"))
+                Encoding.UTF8.GetBytes(key))
         };     
     });
 
