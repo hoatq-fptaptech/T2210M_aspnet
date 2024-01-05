@@ -45,7 +45,10 @@ namespace T2210M_API.Controllers
             {
                 new Claim(ClaimTypes.NameIdentifier,user.Id.ToString()),
                 new Claim(ClaimTypes.Email,user.Email),
-                new Claim(ClaimTypes.Name,user.FullName)
+                new Claim(ClaimTypes.Name,user.FullName),
+                // giả sử lấy đc trong tài khoản này thông tin ROLE
+                //new Claim("Role","CTV")
+                new Claim("Role","Admin")
             };
 
             var token = new JwtSecurityToken(

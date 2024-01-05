@@ -6,12 +6,14 @@ using Microsoft.AspNetCore.Mvc;
 using T2210M_API.Entities;
 using T2210M_API.DTOs;
 using T2210M_API.Models;
+using Microsoft.AspNetCore.Authorization;
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace T2210M_API.Controllers
 {
     [ApiController]
     [Route("/api/category")]
+    [Authorize(Roles = "Admin")]
     public class CategoryController : Controller
     {
         private readonly T2210mApiContext _context;
@@ -34,6 +36,7 @@ namespace T2210M_API.Controllers
         }
 
         [HttpPost]
+        [Authorize(Roles = "Admin")]
         public IActionResult Create(CategoryModel model)
         {
             if (ModelState.IsValid)
@@ -74,6 +77,8 @@ namespace T2210M_API.Controllers
         }
 
         [HttpDelete]
+        // xoá thì phải là supper admin (root@admin.com)
+        [Authorize(Policy = "SuperAdmin")]
         public IActionResult Delete(int id)
         {
             try

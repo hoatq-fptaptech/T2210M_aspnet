@@ -32,6 +32,11 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
         };     
     });
 
+builder.Services.AddAuthorization(options =>
+{
+    options.AddPolicy("SuperAdmin", policy
+        => policy.RequireClaim(ClaimTypes.Email, "root@admin.com"));
+});
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
